@@ -37,4 +37,92 @@
       background: white;
       border-radius: 8px;
       overflow: hidden;
-      box-shadow: 0 2px 10px rgba(0,0,0
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 16px;
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 1.2rem;
+      color: #002b5c;
+    }
+
+    .card p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    footer {
+      background: #002b5c;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Media & Conferences</h1>
+    <p>Scientific presentations and public engagements by Dr. Sarah Kadhim Abbood</p>
+  </header>
+
+  <section class="gallery">
+
+    <div class="card">
+      <img src="https://images.pexels.com/photos/7972635/pexels-photo-7972635.jpeg" alt="PhD Scientific Days 2024">
+      <div class="card-content">
+        <h3>PhD Scientific Days 2024</h3>
+        <p>Presented research on Phenylephrine’s alpha-2 analgesia in rat models.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg" alt="HUPHAR 2024">
+      <div class="card-content">
+        <h3>HUPHAR 2024</h3>
+        <p>Poster & oral session on Pregabalin–Tolperisone combo therapy.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg" alt="Semmelweis Symposium">
+      <div class="card-content">
+        <h3>Semmelweis Symposium</h3>
+        <p>Academic abstract session on neuropathic pain model development.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg" alt="MedPécs 2024">
+      <div class="card-content">
+        <h3>MedPécs 2024</h3>
+        <p>Presented results on analgesic efficacy at Hungary's doctoral summit.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    © 2025 Dr. Sarah Kadhim Abbood. All rights reserved.
+  </footer>
+
+</body>
+</html>
