@@ -2,30 +2,127 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Projects - Dr. Sarah Abbood</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects – Dr. Sarah Abbood</title>
+  <style>
+    :root {
+      --primary: #002b5c;
+      --secondary: #0072ce;
+      --bg: #f5f8fc;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: #1a1a1a;
+    }
+
+    header {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    header h1 {
+      font-size: 2.3rem;
+      margin-bottom: 10px;
+    }
+
+    .section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .section h2 {
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-bottom: 25px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: white;
+      border-left: 5px solid var(--secondary);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.06);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: var(--secondary);
+      font-size: 1.1rem;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #444;
+      margin: 10px 0 0;
+    }
+
+    footer {
+      margin-top: 40px;
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
+  <nav style="background:#002b5c; padding: 15px 20px;">
+  <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; gap: 20px; align-items: center;">
+    <a href="index.html" style="color: white; text-decoration: none; font-weight: bold;">Home</a>
+    <a href="about.html" style="color: white; text-decoration: none;">About</a>
+    <a href="publications.html" style="color: white; text-decoration: none;">Publications</a>
+    <a href="media.html" style="color: white; text-decoration: none;">Media</a>
+    <a href="cv.html" style="color: white; text-decoration: none;">CV</a>
+    <a href="awards.html" style="color: white; text-decoration: none;">Awards</a>
+    <a href="timeline.html" style="color: white; text-decoration: none;">Timeline</a>
+    <a href="projects.html" style="color: white; text-decoration: none;">Projects</a>
+    <a href="collaborations.html" style="color: white; text-decoration: none;">Collaborations</a>
+    <a href="contact.html" style="color: white; text-decoration: none;">Contact</a>
+  </div>
+</nav>
 <body>
+
   <header>
     <h1>Research Projects</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="publications.html">Publications</a>
-    </nav>
+    <p>Current and past pharmacology and public health research</p>
   </header>
-  <main>
-    <section>
-      <h2>Featured Work</h2>
-      <ul>
-        <li><strong>GlyT-1 Inhibition Study</strong> – Morphine tolerance reduction via NMDA modulation</li>
-        <li><strong>Pregabalin–Tolperisone Combo</strong> – Dual-action pain therapy with reduced side effects</li>
-        <li><strong>Pharmacist-Led Fluid Guidelines</strong> – NICE-based application for surgical patients</li>
-        <li><strong>Substance Use Epidemiology</strong> – Survey of Iraqi medical student behaviors</li>
-      </ul>
-    </section>
-  </main>
-  <footer>
-    <p>© 2025 Dr. Sarah Kadhim Abbood</p>
-  </footer>
-</body>
-</html>
+
+  <section class="section">
+    <h2>Active Projects</h2>
+    <div class="grid">
+
+      <div class="card">
+        <h3>GlyT-1 Inhibition in Pain Relief</h3>
+        <p>Exploring transporter-based modulation of morphine tolerance using rat models and NMDAR-linked pathways.</p>
+      </div>
+
+      <div class="card">
+        <h3>Pregabalin–Tolperisone Synergy</h3>
+        <p>Investigating antiallodynic combination therapy to reduce side effects in neuropathic pain treatment.</p>
+      </div>
+
+      <div class="card">
+        <h3>Fluid Therapy Interventions</h3>
+        <p>Improving surgical outcomes using NICE-based guidelines led by pharmacists in hospital settings.</p>
+      </div>
+
+      <div class="card">
+        <h3>Substance Use Epidemiology</h3>
+        <p>Survey-based multicenter study
