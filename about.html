@@ -20,6 +20,29 @@
       color: var(--text);
     }
 
+    nav {
+      background: var(--primary);
+      padding: 15px 20px;
+    }
+
+    nav div {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
     header {
       background: var(--primary);
       color: var(--white);
@@ -112,6 +135,22 @@
   </style>
 </head>
 <body>
+
+  <!-- ✅ Navigation bar -->
+  <nav>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="publications.html">Publications</a>
+      <a href="media.html">Media</a>
+      <a href="cv.html">CV</a>
+      <a href="awards.html">Awards</a>
+      <a href="timeline.html">Timeline</a>
+      <a href="projects.html">Projects</a>
+      <a href="collaborations.html">Collaborations</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
 
   <header>
     <h1>About Dr. Sarah Kadhim Abbood</h1>
