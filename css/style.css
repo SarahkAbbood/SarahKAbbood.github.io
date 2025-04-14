@@ -26,7 +26,8 @@ nav a {
 }
 
 nav a:hover {
-  color: #ffffff;
+  color: #007BFF;
+  text-decoration: underline;
 }
 
 /* Main Content Styles */
