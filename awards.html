@@ -22,12 +22,32 @@
       background: var(--primary);
       color: white;
       text-align: center;
-      padding: 60px 20px;
+      padding: 60px 20px 30px;
     }
 
     header h1 {
       font-size: 2.3rem;
       margin-bottom: 10px;
+    }
+
+    nav {
+      background: var(--primary);
+      padding: 15px 20px;
+    }
+
+    nav div {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 0.95rem;
     }
 
     .section {
@@ -40,6 +60,7 @@
       font-size: 1.5rem;
       color: var(--primary);
       margin-bottom: 25px;
+      text-align: center;
     }
 
     .grid {
@@ -50,10 +71,9 @@
 
     .card {
       background: white;
-      border-left: 5px solid var(--secondary);
       border-radius: 8px;
-      padding: 20px;
       box-shadow: 0 6px 12px rgba(0,0,0,0.06);
+      overflow: hidden;
       transition: transform 0.2s ease;
     }
 
@@ -61,13 +81,23 @@
       transform: translateY(-4px);
     }
 
-    .card h3 {
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-content h3 {
       margin-top: 0;
       color: var(--secondary);
       font-size: 1.1rem;
     }
 
-    .card p {
+    .card-content p {
       font-size: 0.95rem;
       color: #444;
       margin: 10px 0 0;
@@ -85,33 +115,63 @@
 </head>
 <body>
 
+  <!-- Navigation -->
+  <nav>
+    <div>
+      <a href="index.html"><strong>Home</strong></a>
+      <a href="about.html">About</a>
+      <a href="publications.html">Publications</a>
+      <a href="media.html">Media</a>
+      <a href="cv.html">CV</a>
+      <a href="awards.html">Awards</a>
+      <a href="timeline.html">Timeline</a>
+      <a href="projects.html">Projects</a>
+      <a href="collaborations.html">Collaborations</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Header -->
   <header>
     <h1>Awards & Grants</h1>
     <p>Scholarships, research support, and honors</p>
   </header>
 
+  <!-- Section -->
   <section class="section">
     <h2>Recognitions & Support</h2>
     <div class="grid">
 
       <div class="card">
-        <h3>Stipendium Hungaricum Scholarship</h3>
-        <p>Hungarian government-funded scholarship awarded for PhD studies at Semmelweis University.</p>
+        <img src="https://images.pexels.com/photos/39396/education-graduation-graduate-cap-39396.jpeg" alt="Scholarship">
+        <div class="card-content">
+          <h3>Stipendium Hungaricum Scholarship</h3>
+          <p>Hungarian government-funded scholarship awarded for PhD studies at Semmelweis University.</p>
+        </div>
       </div>
 
       <div class="card">
-        <h3>ÚNKP Fellowship</h3>
-        <p>Doctoral fellowship supporting outstanding international students in research-based programs.</p>
+        <img src="https://images.pexels.com/photos/356079/pexels-photo-356079.jpeg" alt="Fellowship">
+        <div class="card-content">
+          <h3>ÚNKP Fellowship</h3>
+          <p>Doctoral fellowship supporting outstanding international students in research-based programs.</p>
+        </div>
       </div>
 
       <div class="card">
-        <h3>Conference Presentation Grants</h3>
-        <p>Travel and registration support for HUPHAR, MedPécs, and PhD Scientific Days.</p>
+        <img src="https://images.pexels.com/photos/1181329/pexels-photo-1181329.jpeg" alt="Conference Funding">
+        <div class="card-content">
+          <h3>Conference Presentation Grants</h3>
+          <p>Travel and registration support for HUPHAR, MedPécs, and PhD Scientific Days.</p>
+        </div>
       </div>
 
       <div class="card">
-        <h3>SE250+ Research Track</h3>
-        <p>Participation in Semmelweis University’s excellence program focused on innovation and research impact.</p>
+        <img src="https://images.pexels.com/photos/3184405/pexels-photo-3184405.jpeg" alt="Excellence Program">
+        <div class="card-content">
+          <h3>SE250+ Research Track</h3>
+          <p>Participation in Semmelweis University’s excellence program focused on innovation and research impact.</p>
+        </div>
       </div>
 
     </div>
