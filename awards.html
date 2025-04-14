@@ -12,7 +12,132 @@
       <a href="index.html">Home</a>
     </nav>
   </header>
-  <main>
+  <main><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Awards & Grants – Dr. Sarah Abbood</title>
+  <style>
+    :root {
+      --primary: #002b5c;
+      --secondary: #0072ce;
+      --bg: #f5f8fc;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: #1a1a1a;
+    }
+
+    header {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    header h1 {
+      font-size: 2.3rem;
+      margin-bottom: 10px;
+    }
+
+    .section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .section h2 {
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-bottom: 25px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: white;
+      border-left: 5px solid var(--secondary);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.06);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: var(--secondary);
+      font-size: 1.1rem;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #444;
+      margin: 10px 0 0;
+    }
+
+    footer {
+      margin-top: 40px;
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Awards & Grants</h1>
+    <p>Scholarships, research support, and honors</p>
+  </header>
+
+  <section class="section">
+    <h2>Recognitions & Support</h2>
+    <div class="grid">
+
+      <div class="card">
+        <h3>Stipendium Hungaricum Scholarship</h3>
+        <p>Hungarian government-funded scholarship awarded for PhD studies at Semmelweis University.</p>
+      </div>
+
+      <div class="card">
+        <h3>ÚNKP Fellowship</h3>
+        <p>Doctoral fellowship supporting outstanding international students in research-based programs.</p>
+      </div>
+
+      <div class="card">
+        <h3>Conference Presentation Grants</h3>
+        <p>Travel and registration support for HUPHAR, MedPécs, and PhD Scientific Days.</p>
+      </div>
+
+      <div class="card">
+        <h3>SE250+ Research Track</h3>
+        <p>Participation in Semmelweis University’s excellence program focused on innovation and research impact.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Dr. Sarah Kadhim Abbood. All rights reserved.
+  </footer>
+
+</body>
+</html>
+
     <section>
       <ul>
         <li><strong>Stipendium Hungaricum</strong> – Full doctoral scholarship, Semmelweis University</li>
