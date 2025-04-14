@@ -2,35 +2,181 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Publications</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Publications – Dr. Sarah Abbood</title>
+  <style>
+    :root {
+      --primary: #002b5c;
+      --secondary: #0072ce;
+      --bg: #f8fbff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: #1a1a1a;
+    }
+
+    header {
+      background-color: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .section {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .section h2 {
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .pub-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-left: 6px solid var(--secondary);
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card h3 {
+      font-size: 1.1rem;
+      color: var(--secondary);
+      margin: 0 0 10px;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: #444;
+      margin: 0 0 5px;
+    }
+
+    .card a {
+      font-size: 0.85rem;
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    footer {
+      margin-top: 40px;
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
+
   <header>
     <h1>Publications</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="cv.html">CV</a>
-    </nav>
+    <p>Selected peer-reviewed works and conference contributions</p>
   </header>
-  <main>
-    <section>
-      <h2>Research Articles</h2>
-      <ul>
-        <li><strong>IJMS 2024</strong> – GlyT-1 inhibition for morphine tolerance [IF: 4.9]</li>
-        <li><strong>Pharmaceuticals 2023</strong> – Pregabalin–Tolperisone combination therapy [IF: 4.3]</li>
-        <li><strong>Med J Babylon 2022</strong> – Warfarin pharmacogenetics study</li>
-      </ul>
 
-      <h2>Conference Abstracts</h2>
-      <ul>
-        <li>PhD Scientific Days 2024 – Phenylephrine analgesia</li>
-        <li>MedPécs 2024 – Acute pain studies</li>
-      </ul>
-    </section>
-  </main>
+  <section class="section">
+    <h2>🧪 Research Articles</h2>
+    <div class="pub-grid">
+
+      <div class="card">
+        <h3>GlyT-1 Inhibition & Morphine Tolerance</h3>
+        <p>IJMS 2024 | D1/Q1 | IF: 4.9</p>
+        <a href="https://doi.org/10.3390/ijms252011136" target="_blank">DOI: 10.3390/ijms252011136</a>
+      </div>
+
+      <div class="card">
+        <h3>Telmisartan with Opioids</h3>
+        <p>IJMS 2023 | D1/Q1 | IF: 4.9</p>
+        <a href="https://doi.org/10.3390/ijms24097970" target="_blank">DOI: 10.3390/ijms24097970</a>
+      </div>
+
+      <div class="card">
+        <h3>Pregabalin–Tolperisone Study</h3>
+        <p>Pharmaceuticals 2023 | Q1 | IF: 4.3</p>
+        <a href="https://doi.org/10.3390/ph16081115" target="_blank">DOI: 10.3390/ph16081115</a>
+      </div>
+
+      <div class="card">
+        <h3>Warfarin Pharmacogenetics</h3>
+        <p>Med J Babylon 2022</p>
+        <a href="https://doi.org/10.4103/MJBL.MJBL_70_22" target="_blank">DOI: MJBL_70_22</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>👩‍🏫 Public Health & Teaching</h2>
+    <div class="pub-grid">
+
+      <div class="card">
+        <h3>Substance Use in Iraqi Students</h3>
+        <p>J Substance Use 2023 | Q3 | IF: 0.6</p>
+        <a href="https://doi.org/10.1080/14659891.2023.2173093" target="_blank">DOI: 2173093</a>
+      </div>
+
+      <div class="card">
+        <h3>Antibiotic Dispensing Practices</h3>
+        <p>J Public Health Dev 2023 | Q4</p>
+        <a href="https://doi.org/10.55131/jphd/2023/210102" target="_blank">DOI: 210102</a>
+      </div>
+
+      <div class="card">
+        <h3>Fluid Therapy Guidelines</h3>
+        <p>Pharmacy Practice 2019</p>
+        <a href="https://doi.org/10.18549/PharmPract.2019.3.1552" target="_blank">DOI: 3.1552</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>🎤 Conference Abstracts</h2>
+    <div class="pub-grid">
+
+      <div class="card">
+        <h3>Phenylephrine Analgesia</h3>
+        <p>PhD Scientific Days 2024 – Semmelweis University</p>
+      </div>
+
+      <div class="card">
+        <h3>GlyT-1 Findings</h3>
+        <p>FAMÉ 2023 – Hungary</p>
+      </div>
+
+      <div class="card">
+        <h3>Pregabalin Combo Poster</h3>
+        <p>MedPécs 2024 – Conference</p>
+      </div>
+
+    </div>
+  </section>
+
   <footer>
-    <p>© 2025 Dr. Sarah Kadhim Abbood</p>
+    © 2025 Dr. Sarah Kadhim Abbood. All rights reserved.
   </footer>
+
 </body>
 </html>
