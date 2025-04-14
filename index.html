@@ -2,33 +2,184 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Dr. Sarah Kadhim Abbood</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dr. Sarah Kadhim Abbood – Academic Profile</title>
+  <style>
+    :root {
+      --primary: #002b5c;
+      --secondary: #0072ce;
+      --bg: #f5f8fa;
+      --text: #1a1a1a;
+      --white: #fff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+    }
+
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #eee;
+    }
+
+    .section {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .section h2 {
+      font-size: 1.8rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .about-grid, .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-content h3 {
+      margin-top: 0;
+      color: var(--secondary);
+    }
+
+    .card-content p {
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    footer {
+      margin-top: 40px;
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+
+    a.button {
+      display: inline-block;
+      background: var(--secondary);
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 6px;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
+
   <header>
     <h1>Dr. Sarah Kadhim Abbood</h1>
-    <p>Pharmacologist | Neuropathic Pain | Public Health</p>
-    <nav>
-      <a href="about.html">About</a>
-      <a href="cv.html">CV</a>
-      <a href="publications.html">Publications</a>
-      <a href="awards.html">Awards</a>
-      <a href="timeline.html">Timeline</a>
-      <a href="projects.html">Projects</a>
-      <a href="collaborations.html">Collaborations</a>
-      <a href="media.html">Media</a>
-    </nav>
+    <p>PhD Pharmacologist | Neuropathic Pain Researcher | Educator</p>
+    <a href="publications.html" class="button">View Publications</a>
   </header>
-  <main>
-    <section>
-      <h2>Welcome</h2>
-      <p>Explore Dr. Sarah Kadhim Abbood’s academic work, publications, and collaborations.</p>
-      <a href="publications.html" class="button">View Publications</a>
-    </section>
-  </main>
+
+  <section class="section">
+    <h2>About</h2>
+    <div class="about-grid">
+      <div class="card">
+        <img src="https://images.pexels.com/photos/6981024/pexels-photo-6981024.jpeg" alt="PhD Student">
+        <div class="card-content">
+          <h3>Academic Researcher</h3>
+          <p>PhD candidate at Semmelweis University, Hungary, exploring mechanisms in neuropathic pain.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.pexels.com/photos/4709285/pexels-photo-4709285.jpeg" alt="Lecturer">
+        <div class="card-content">
+          <h3>University Lecturer</h3>
+          <p>Over a decade of experience teaching clinical pharmacy at University of Kufa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Research Areas</h2>
+    <div class="about-grid">
+      <div class="card">
+        <img src="https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg" alt="Pharmacology">
+        <div class="card-content">
+          <h3>Pharmacology</h3>
+          <p>Investigating GlyT-1 inhibitors and alpha-2 adrenergic pathways for pain relief.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.pexels.com/photos/3182831/pexels-photo-3182831.jpeg" alt="Conference">
+        <div class="card-content">
+          <h3>Public Health</h3>
+          <p>Published works on tobacco use, antibiotic misuse, and clinical practice interventions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Contact</h2>
+    <div class="contact-grid">
+      <div class="card">
+        <div class="card-content">
+          <h3>Email</h3>
+          <p>sarahk.alkafage@uokufa.edu.iq<br>abbood.sarah@phd.semmelweis.hu</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <h3>Social Links</h3>
+          <p>
+            <a href="https://linkedin.com/in/pharmacist-chingom-64a72b115" target="_blank">LinkedIn</a><br>
+            <a href="https://facebook.com/chingom.phar" target="_blank">Facebook</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <footer>
-    <p>© 2025 Dr. Sarah Kadhim Abbood</p>
+    © 2025 Dr. Sarah Kadhim Abbood — Built with 💙
   </footer>
+
 </body>
 </html>
