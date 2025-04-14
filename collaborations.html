@@ -2,29 +2,138 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Collaborations - Dr. Sarah Abbood</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Collaborations – Dr. Sarah Abbood</title>
+  <style>
+    :root {
+      --primary: #002b5c;
+      --secondary: #0072ce;
+      --bg: #f4f7fb;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg);
+      color: #1a1a1a;
+    }
+
+    header {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    header h1 {
+      font-size: 2.3rem;
+      margin-bottom: 10px;
+    }
+
+    .section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .section h2 {
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-bottom: 25px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: white;
+      border-left: 5px solid var(--secondary);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.06);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: var(--secondary);
+      font-size: 1.1rem;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #444;
+      margin: 10px 0 0;
+    }
+
+    footer {
+      margin-top: 40px;
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
+  <nav style="background:#002b5c; padding: 15px 20px;">
+  <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; gap: 20px; align-items: center;">
+    <a href="index.html" style="color: white; text-decoration: none; font-weight: bold;">Home</a>
+    <a href="about.html" style="color: white; text-decoration: none;">About</a>
+    <a href="publications.html" style="color: white; text-decoration: none;">Publications</a>
+    <a href="media.html" style="color: white; text-decoration: none;">Media</a>
+    <a href="cv.html" style="color: white; text-decoration: none;">CV</a>
+    <a href="awards.html" style="color: white; text-decoration: none;">Awards</a>
+    <a href="timeline.html" style="color: white; text-decoration: none;">Timeline</a>
+    <a href="projects.html" style="color: white; text-decoration: none;">Projects</a>
+    <a href="collaborations.html" style="color: white; text-decoration: none;">Collaborations</a>
+    <a href="contact.html" style="color: white; text-decoration: none;">Contact</a>
+  </div>
+</nav>
 <body>
+
   <header>
     <h1>Collaborations</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-    </nav>
+    <p>Academic and research partners throughout Sarah’s career</p>
   </header>
-  <main>
-    <section>
-      <ul>
-        <li><strong>Semmelweis University</strong> – Doctoral research supervision</li>
-        <li><strong>University of Kufa</strong> – Lecturer and clinical project lead</li>
-        <li><strong>Hungarian Scientific Events</strong> – HUPHAR, MedPécs, PhD Symposiums</li>
-        <li><strong>International Publications</strong> – IJMS, Pharmaceuticals, Public Health</li>
-      </ul>
-    </section>
-  </main>
+
+  <section class="section">
+    <h2>Institutional & Scientific Partners</h2>
+    <div class="grid">
+
+      <div class="card">
+        <h3>Semmelweis University</h3>
+        <p>Current doctoral affiliation and host of international research forums and grant-funded labs.</p>
+      </div>
+
+      <div class="card">
+        <h3>University of Kufa</h3>
+        <p>Academic career roots — over 10 years as a lecturer, mentor, and faculty researcher in Iraq.</p>
+      </div>
+
+      <div class="card">
+        <h3>HUPHAR & MedPécs</h3>
+        <p>Recurring presenter at top Hungarian pharmacology and doctoral symposia and panels.</p>
+      </div>
+
+      <div class="card">
+        <h3>Multi-Journal Co-Authors</h3>
+        <p>Joint publications in IJMS, Pharmaceuticals, Journal of Substance Use, and public health outlets.</p>
+      </div>
+
+    </div>
+  </section>
+
   <footer>
-    <p>© 2025 Dr. Sarah Kadhim Abbood</p>
+    © 2025 Dr. Sarah Kadhim Abbood. All rights reserved.
   </footer>
+
 </body>
 </html>
