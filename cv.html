@@ -2,35 +2,103 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>CV - Dr. Sarah Abbood</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CV – Dr. Sarah Kadhim Abbood</title>
+  <style>
+    :root {
+      --primary: #002b5c;
+      --secondary: #0072ce;
+      --bg: #f4f7fb;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: #1a1a1a;
+    }
+
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.3rem;
+    }
+
+    .section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .cv-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+      padding: 30px;
+    }
+
+    .cv-card img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .cv-card p {
+      font-size: 1rem;
+      color: #444;
+      margin-bottom: 20px;
+    }
+
+    .cv-card a {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: var(--secondary);
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.2s ease;
+    }
+
+    .cv-card a:hover {
+      background-color: #005fb8;
+    }
+
+    footer {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
+
   <header>
     <h1>Curriculum Vitae</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-    </nav>
+    <p>Full academic record and credentials of Dr. Sarah Kadhim Abbood</p>
   </header>
-  <main>
-    <section>
-      <h2>Download CV</h2>
-      <p><a class="button" href="cv/Sarah_CV_2025.pdf" target="_blank">Download Europass CV</a></p>
-    </section>
 
-    <section>
-      <h2>Key Highlights</h2>
-      <ul>
-        <li>PhD in Pharmacology, Semmelweis University</li>
-        <li>Over 10 published papers (D1/Q1 IF journals)</li>
-        <li>Conference presentations: HUPHAR, PhD Scientific Days</li>
-        <li>Fluent in English & Arabic, GCP certified</li>
-      </ul>
-    </section>
-  </main>
+  <section class="section">
+    <div class="cv-card">
+      <img src="https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg" alt="CV Document">
+      <p>Download the verified Europass CV containing education, publications, presentations, and honors.</p>
+      <a href="Sarah%20CV%202025.pdf" target="_blank">📥 Download CV (PDF)</a>
+    </div>
+  </section>
+
   <footer>
-    <p>© 2025 Dr. Sarah Kadhim Abbood</p>
+    © 2025 Dr. Sarah Kadhim Abbood. All rights reserved.
   </footer>
+
 </body>
 </html>
