@@ -1,61 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Awards and grants received by Dr. Sarah Abbood, including scholarships, research fellowships, and conference grants.">
-  <title>Awards & Grants - Dr. Sarah Abbood</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Awards & Grants – Dr. Sarah Kadhim Abbood</title>
+  <style>
+    :root {
+      --primary: #002b5c;
+      --secondary: #0072ce;
+      --bg: #f5f8fc;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: #1a1a1a;
+    }
+
+    header {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    header h1 {
+      font-size: 2.3rem;
+      margin-bottom: 10px;
+    }
+
+    .section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .section h2 {
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-bottom: 25px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: white;
+      border-left: 5px solid var(--secondary);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.06);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: var(--secondary);
+      font-size: 1.1rem;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #444;
+      margin: 10px 0 0;
+    }
+
+    footer {
+      margin-top: 40px;
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
+
   <header>
     <h1>Awards & Grants</h1>
     <p>Scholarships, research support, and honors</p>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="media.html">Media</a></li>
-        <li><a href="cv.html">CV</a></li>
-        <li><a href="awards.html" aria-current="page">Awards</a></li>
-        <li><a href="timeline.html">Timeline</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="collaborations.html">Collaborations</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
   </header>
 
-  <main>
-    <section class="section">
-      <h2>Recognitions & Support</h2>
-      <div class="grid">
-        <article class="card">
-          <h3>Stipendium Hungaricum Scholarship</h3>
-          <p>Hungarian government-funded scholarship awarded for PhD studies at Semmelweis University.</p>
-        </article>
+  <section class="section">
+    <h2>Recognitions & Support</h2>
+    <div class="grid">
 
-        <article class="card">
-          <h3>ÚNKP Fellowship</h3>
-          <p>Doctoral fellowship supporting outstanding international students in research-based programs.</p>
-        </article>
-
-        <article class="card">
-          <h3>Conference Presentation Grants</h3>
-          <p>Travel and registration support for HUPHAR, MedPécs, and PhD Scientific Days.</p>
-        </article>
-
-        <article class="card">
-          <h3>SE250+ Research Track</h3>
-          <p>Participation in Semmelweis University’s excellence program focused on innovation and research impact.</p>
-        </article>
+      <div class="card">
+        <h3>Stipendium Hungaricum Scholarship</h3>
+        <p>Hungarian government-funded scholarship awarded for PhD studies at Semmelweis University.</p>
       </div>
-    </section>
-  </main>
+
+      <div class="card">
+        <h3>ÚNKP Fellowship</h3>
+        <p>Doctoral fellowship supporting outstanding international students in research-based programs.</p>
+      </div>
+
+      <div class="card">
+        <h3>Conference Presentation Grants</h3>
+        <p>Travel and registration support for HUPHAR, MedPécs, and PhD Scientific Days.</p>
+      </div>
+
+      <div class="card">
+        <h3>SE250+ Research Track</h3>
+        <p>Participation in Semmelweis University’s excellence program focused on innovation and research impact.</p>
+      </div>
+
+    </div>
+  </section>
 
   <footer>
-    <p>© 2025 Dr. Sarah Kadhim Abbood. All rights reserved.</p>
+    © 2025 Dr. Sarah Kadhim Abbood. All rights reserved.
   </footer>
+
 </body>
 </html>
