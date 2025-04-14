@@ -15,8 +15,27 @@
     header {
       background-color: #002b5c;
       color: white;
-      padding: 50px 20px;
+      padding: 20px;
       text-align: center;
+    }
+
+    header nav {
+      background-color: #002b5c;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 15px;
+    }
+
+    header nav a:last-child {
+      margin-right: 0;
     }
 
     header h1 {
@@ -90,29 +109,39 @@
       font-size: 0.9rem;
     }
 
-    /* Fade-in animation on scroll */
-    .card {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 0.6s ease forwards;
+    .cta-section {
+      text-align: center;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #e8f0fe;
+      border-radius: 10px;
     }
 
-    .card:nth-child(1) { animation-delay: 0.2s; }
-    .card:nth-child(2) { animation-delay: 0.4s; }
-    .card:nth-child(3) { animation-delay: 0.6s; }
-    .card:nth-child(4) { animation-delay: 0.8s; }
+    .cta-section a {
+      display: inline-block;
+      background-color: #002b5c;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 10px;
+    }
 
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    .cta-section a:hover {
+      background-color: #004080;
     }
   </style>
 </head>
 <body>
-
   <header>
+    <nav>
+      <div><a href="index.html">Home</a></div>
+      <div>
+        <a href="about.html">About</a>
+        <a href="publications.html">Publications</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
     <h1>About Dr. Sarah Kadhim Abbood</h1>
     <p>Pharmacologist | Researcher | Educator</p>
   </header>
@@ -120,9 +149,8 @@
   <section class="section">
     <h2>Academic Background & Roles</h2>
     <div class="grid">
-
       <div class="card">
-        <img src="https://images.pexels.com/photos/3184329/pexels-photo-3184329.jpeg" alt="PhD Student">
+        <img src="https://images.pexels.com/photos/3184329/pexels-photo-3184329.jpeg" alt="Dr. Sarah conducting research in a lab">
         <div class="card-content">
           <h3>PhD Candidate at Semmelweis University</h3>
           <p>Doctoral research on neuropathic pain and opioid tolerance using animal models.</p>
@@ -130,7 +158,7 @@
       </div>
 
       <div class="card">
-        <img src="https://images.pexels.com/photos/4709285/pexels-photo-4709285.jpeg" alt="Lecturing">
+        <img src="https://images.pexels.com/photos/4709285/pexels-photo-4709285.jpeg" alt="Dr. Sarah lecturing">
         <div class="card-content">
           <h3>Lecturer & Researcher</h3>
           <p>Led clinical pharmacy courses and supervised student theses at the University of Kufa.</p>
@@ -138,27 +166,35 @@
       </div>
 
       <div class="card">
-        <img src="https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg" alt="Publication Research">
+        <img src="https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg" alt="Scientific publications by Dr. Sarah">
         <div class="card-content">
           <h3>10+ Scientific Publications</h3>
-          <p>Contributed to IJMS, Pharmaceuticals, Journal of Substance Use, and more.</p>
+          <p>
+            Contributed to journals like 
+            <a href="https://www.mdpi.com/journal/ijms" target="_blank" style="color: #003974;">IJMS</a>, 
+            <a href="https://www.mdpi.com/journal/pharmaceuticals" target="_blank" style="color: #003974;">Pharmaceuticals</a>, and others.
+          </p>
         </div>
       </div>
 
       <div class="card">
-        <img src="https://images.pexels.com/photos/3182831/pexels-photo-3182831.jpeg" alt="Conference">
+        <img src="https://images.pexels.com/photos/3182831/pexels-photo-3182831.jpeg" alt="Dr. Sarah presenting at conferences">
         <div class="card-content">
           <h3>Conference Presenter</h3>
           <p>Presented at HUPHAR, MedPécs, and Semmelweis Symposium on pharmacological research.</p>
         </div>
       </div>
-
     </div>
+  </section>
+
+  <section class="cta-section">
+    <h2>Contact Me</h2>
+    <p>If you'd like to collaborate or ask any questions, feel free to get in touch!</p>
+    <a href="contact.html">Get in Touch</a>
   </section>
 
   <footer>
     © 2025 Dr. Sarah Kadhim Abbood. All rights reserved.
   </footer>
-
 </body>
 </html>
