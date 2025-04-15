@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Awards & Grants – Dr. Sarah Kadhim Abbood</title>
   <style>
     :root {
@@ -72,7 +72,7 @@
     .card {
       background: white;
       border-radius: 8px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.06);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
       overflow: hidden;
       transition: transform 0.2s ease;
     }
@@ -82,9 +82,16 @@
     }
 
     .card img {
-      width: 100%;
-      height: 160px;
-      object-fit: cover;
+      width: 100%; /* Ensures the image fills the card width */
+      height: 200px; /* Sets a fixed height for all images */
+      object-fit: cover; /* Crops the image to fill the space while maintaining aspect ratio */
+      border-radius: 8px; /* Adds a modern rounded corner effect */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for a modern look */
+      transition: transform 0.3s ease; /* Adds smooth hover effect */
+    }
+
+    .card img:hover {
+      transform: scale(1.05); /* Slight zoom-in effect on hover */
     }
 
     .card-content {
@@ -143,7 +150,7 @@
     <div class="grid">
 
       <div class="card">
-<img src="images/awards/stipendium_hungaricum.jpeg" alt="Scholarship">
+        <img src="images/awards/stipendium_hungaricum.jpeg" alt="Scholarship">
         <div class="card-content">
           <h3>Stipendium Hungaricum Scholarship</h3>
           <p>Hungarian government-funded scholarship awarded for PhD studies at Semmelweis University.</p>
@@ -151,7 +158,7 @@
       </div>
 
       <div class="card">
-<img src="images/awards/unkp_fellowship.jpeg" alt="Fellowship">
+        <img src="images/awards/unkp_fellowship.jpeg" alt="Fellowship">
         <div class="card-content">
           <h3>ÚNKP Fellowship</h3>
           <p>Doctoral fellowship supporting outstanding international students in research-based programs.</p>
@@ -159,7 +166,7 @@
       </div>
 
       <div class="card">
-<img src="images/awards/conference_grants.jpeg" alt="Conference Funding">
+        <img src="images/awards/conference_grants.jpeg" alt="Conference Funding">
         <div class="card-content">
           <h3>Conference Presentation Grants</h3>
           <p>Travel and registration support for HUPHAR, MedPécs, and PhD Scientific Days.</p>
@@ -167,7 +174,7 @@
       </div>
 
       <div class="card">
-<img src="images/awards/se250_research_track.jpeg" alt="Excellence Program">
+        <img src="images/awards/se250_research_track.jpeg" alt="Excellence Program">
         <div class="card-content">
           <h3>SE250+ Research Track</h3>
           <p>Participation in Semmelweis University’s excellence program focused on innovation and research impact.</p>
