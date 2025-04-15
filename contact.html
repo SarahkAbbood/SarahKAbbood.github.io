@@ -6,6 +6,8 @@
   <meta name="description" content="Contact page for Dr. Sarah Kadhim Abbood. Get in touch for collaborations or inquiries.">
   <meta name="keywords" content="Contact, Dr. Sarah Kadhim Abbood, Email, LinkedIn, Facebook">
   <title>Contact – Dr. Sarah Kadhim Abbood</title>
+  <!-- Font Awesome for Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <style>
     :root {
       --primary: #002b5c;
@@ -65,15 +67,17 @@
       font-size: 1.1rem;
     }
 
-    .card p,
-    .card a {
-      font-size: 0.95rem;
-      color: #444;
+    .contact-icons a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
       text-decoration: none;
+      color: var(--primary);
+      font-size: 1.1rem;
     }
 
-    .card a:hover {
-      text-decoration: underline;
+    .contact-icons a:hover {
+      color: var(--secondary);
     }
 
     form {
@@ -132,19 +136,19 @@
 </head>
 <body>
   <nav style="background:#002b5c; padding: 15px 20px;">
-  <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; gap: 20px; align-items: center;">
-    <a href="index.html" style="color: white; text-decoration: none; font-weight: bold;">Home</a>
-    <a href="about.html" style="color: white; text-decoration: none;">About</a>
-    <a href="publications.html" style="color: white; text-decoration: none;">Publications</a>
-    <a href="media.html" style="color: white; text-decoration: none;">Media</a>
-    <a href="cv.html" style="color: white; text-decoration: none;">CV</a>
-    <a href="awards.html" style="color: white; text-decoration: none;">Awards</a>
-    <a href="timeline.html" style="color: white; text-decoration: none;">Timeline</a>
-    <a href="projects.html" style="color: white; text-decoration: none;">Projects</a>
-    <a href="collaborations.html" style="color: white; text-decoration: none;">Collaborations</a>
-    <a href="contact.html" style="color: white; text-decoration: none;">Contact</a>
-  </div>
-</nav>
+    <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; gap: 20px; align-items: center;">
+      <a href="index.html" style="color: white; text-decoration: none; font-weight: bold;">Home</a>
+      <a href="about.html" style="color: white; text-decoration: none;">About</a>
+      <a href="publications.html" style="color: white; text-decoration: none;">Publications</a>
+      <a href="media.html" style="color: white; text-decoration: none;">Media</a>
+      <a href="cv.html" style="color: white; text-decoration: none;">CV</a>
+      <a href="awards.html" style="color: white; text-decoration: none;">Awards</a>
+      <a href="timeline.html" style="color: white; text-decoration: none;">Timeline</a>
+      <a href="projects.html" style="color: white; text-decoration: none;">Projects</a>
+      <a href="collaborations.html" style="color: white; text-decoration: none;">Collaborations</a>
+      <a href="contact.html" style="color: white; text-decoration: none;">Contact</a>
+    </div>
+  </nav>
   <header>
     <h1>Contact</h1>
     <p>Get in touch with Dr. Sarah Kadhim Abbood</p>
@@ -155,28 +159,38 @@
     <div class="grid">
       <div class="card">
         <h3>Email</h3>
-        <p>sarahk.alkafage@uokufa.edu.iq</p>
-        <p>abbood.sarah@phd.semmelweis.hu</p>
+        <div class="contact-icons">
+          <a id="emailLink" href="#" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+            <span>Email Me</span>
+          </a>
+        </div>
       </div>
 
       <div class="card">
         <h3>LinkedIn</h3>
-        <a href="https://www.linkedin.com/in/sarah-abbood-64a72b115/" 
-           target="_blank" 
-           rel="noopener noreferrer" 
-           aria-label="Visit Sarah Abbood's LinkedIn profile">
-          linkedin.com/in/sarah-abbood
-        </a>
+        <div class="contact-icons">
+          <a href="https://www.linkedin.com/in/sarah-abbood-64a72b115/"
+             target="_blank" 
+             rel="noopener noreferrer" 
+             aria-label="Visit Sarah Abbood's LinkedIn profile">
+            <i class="fab fa-linkedin"></i>
+            LinkedIn
+          </a>
+        </div>
       </div>
 
       <div class="card">
         <h3>Facebook</h3>
-        <a href="https://facebook.com/chingom.phar" 
-           target="_blank" 
-           rel="noopener noreferrer" 
-           aria-label="Visit Sarah Abbood's Facebook profile">
-          facebook.com/chingom.phar
-        </a>
+        <div class="contact-icons">
+          <a href="https://facebook.com/chingom.phar" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             aria-label="Visit Sarah Abbood's Facebook profile">
+            <i class="fab fa-facebook"></i>
+            Facebook
+          </a>
+        </div>
       </div>
 
       <div class="card">
@@ -198,23 +212,9 @@
   </section>
 
   <section class="section map">
-  <h2>Find Me</h2>
-  <div id="map"></div>
-</section>
-<script>
-  function initMap() {
-    const location = { lat: 47.497912, lng: 19.040235 };
-    const map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 14,
-      center: location,
-    });
-    new google.maps.Marker({
-      position: location,
-      map: map,
-    });
-  }
-</script>
-<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <h2>Find Me</h2>
+    <div id="map"></div>
+  </section>
 
   <footer>
     © <span id="year">2025</span> Dr. Sarah Kadhim Abbood. All rights reserved.
@@ -224,6 +224,13 @@
     // Dynamically update the year in the footer
     document.getElementById("year").textContent = new Date().getFullYear();
 
+    // Obfuscate email
+    const emailUser = "sarahk.alkafage";
+    const emailDomain = "uokufa.edu.iq";
+    const emailLink = document.getElementById("emailLink");
+    emailLink.href = `mailto:${emailUser}@${emailDomain}`;
+    emailLink.querySelector("span").textContent = `${emailUser}@${emailDomain}`;
+
     // Handle form submission success message
     const form = document.getElementById('contactForm');
     const successMessage = document.getElementById('successMessage');
@@ -231,20 +238,6 @@
       e.preventDefault();
       successMessage.style.display = 'block';
     };
-
-    // Initialize Google Maps
-    function initMap() {
-      const location = { lat: 47.497912, lng: 19.040235 };
-      const map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 14,
-        center: location,
-      });
-      new google.maps.Marker({
-        position: location,
-        map: map,
-      });
-    }
   </script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
 </body>
 </html>
