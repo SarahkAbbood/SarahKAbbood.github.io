@@ -1,92 +1,100 @@
 /* General Styles */
 :root {
-  --primary: #0d3c66; /* Existing primary color */
-  --secondary: #007BFF; /* Updated hover color */
-  --bg: #f4f6f9; /* Background color from existing file */
+  --primary: #002b5c;
+  --secondary: #0072ce;
+  --bg: #f5f8fa;
+  --text: #1a1a1a;
+  --white: #fff;
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif; /* Updated from Arial for modern look */
+  font-family: 'Segoe UI', sans-serif;
   background-color: var(--bg);
-  color: #222;
+  color: var(--text);
   margin: 0;
   padding: 0;
-  line-height: 1.6; /* Improved readability */
+  line-height: 1.6;
+}
+
+/* Accessibility Focus Styles */
+a:focus, button:focus, input:focus {
+  outline: 2px dashed var(--secondary);
+  outline-offset: 4px;
 }
 
 /* Header Styles */
 header {
-  background-color: var(--primary); /* Use variable for consistency */
-  color: #fff;
-  padding: 60px 20px 30px; /* Updated padding for better spacing */
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 80px 20px;
   text-align: center;
 }
 
 header h1 {
-  font-size: 2.5rem; /* Improved scaling */
-  margin-bottom: 0.5rem;
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.1rem;
+  color: #eee;
 }
 
 /* Navigation Styles */
+nav {
+  background: var(--primary);
+  padding: 15px 20px;
+}
+
 nav a {
-  color: #c6ddf9;
+  color: var(--white);
   text-decoration: none;
-  margin: 0 10px;
   font-weight: bold;
-  transition: color 0.3s ease-in-out; /* Smooth hover effect */
+  margin-right: 20px;
+  transition: color 0.3s ease-in-out;
 }
 
 nav a:hover {
-  color: var(--secondary); /* Updated hover color using variable */
   text-decoration: underline;
-}
-
-/* Main Content Styles */
-main {
-  max-width: 960px;
-  margin: 30px auto;
-  padding: 20px;
-  background-color: #ffffff; /* Add background for better contrast */
-  border-radius: 8px; /* Rounded corners for a modern look */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 /* Section Styles */
 .section {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 40px auto;
   padding: 0 20px;
 }
 
 .section h2 {
-  font-size: 1.8rem; /* Updated scaling */
-  color: var(--primary); /* Consistent color usage */
-  margin-bottom: 25px;
+  font-size: 1.8rem;
+  color: var(--primary);
+  margin-bottom: 20px;
   text-align: center;
 }
 
-/* Grid and Card Styles (For Awards Section) */
-.grid {
+/* Grid and Card Styles */
+.grid, .about-grid, .contact-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
 }
 
 .card {
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
+  background-color: var(--white);
+  border-radius: 10px;
   overflow: hidden;
-  transition: transform 0.2s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .card img {
   width: 100%;
-  height: 160px;
+  height: 180px;
   object-fit: cover;
 }
 
@@ -109,36 +117,34 @@ main {
 .card-content p {
   font-size: 0.95rem;
   color: #444;
-  margin: 10px 0 0;
-}
-
-/* Footer Styles */
-footer {
-  background-color: var(--primary); /* Use variable for consistency */
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9em; /* Slightly smaller font for footer text */
-  color: white;
-  margin-top: 40px;
 }
 
 /* Button Styles */
 a.button {
-  background-color: var(--primary); /* Use variable for consistency */
-  color: #ffffff;
-  padding: 10px 20px;
   display: inline-block;
+  background-color: var(--secondary);
+  color: var(--white);
+  padding: 12px 24px;
   text-decoration: none;
-  margin-top: 10px;
-  border-radius: 5px;
+  border-radius: 6px;
+  margin-top: 20px;
   font-weight: bold;
-  transition: background-color 0.3s ease-in-out; /* Smooth hover effect */
+  transition: background-color 0.3s ease-in-out;
 }
 
 a.button:hover {
-  background-color: var(--secondary); /* Updated hover color */
+  background-color: var(--primary);
 }
-/* Contact Page Specific Styles */
+
+/* Footer Styles */
+footer {
+  margin-top: 40px;
+  background: var(--primary);
+  color: var(--white);
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
 
 /* Form Styles */
 form {
@@ -158,7 +164,7 @@ form button {
 
 form button {
   background: var(--primary);
-  color: white;
+  color: var(--white);
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -168,29 +174,52 @@ form button:hover {
   background: var(--secondary);
 }
 
-/* Success Message */
-#successMessage {
-  text-align: center;
-  font-size: 1rem;
-  color: green;
-  display: none;
+/* Placeholder Styles */
+::placeholder {
+  color: #aaa;
+  font-style: italic;
 }
 
-/* Map Section */
-.map {
-  margin-top: 40px;
+/* Responsive Design */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
-iframe {
-  width: 100%;
-  height: 350px;
-  border: none;
-  border-radius: 8px;
-}
-
-/* Responsive Design for Contact Page */
 @media (max-width: 600px) {
   .grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #1a1a1a;
+    --secondary: #4a90e2;
+    --bg: #121212;
+    --text: #f5f5f5;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+  }
+
+  header, footer {
+    background-color: var(--primary);
+  }
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+
+  nav, footer {
+    display: none;
   }
 }
