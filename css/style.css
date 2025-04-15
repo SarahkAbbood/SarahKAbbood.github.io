@@ -1,7 +1,13 @@
 /* General Styles */
+:root {
+  --primary: #0d3c66; /* Existing primary color */
+  --secondary: #007BFF; /* Updated hover color */
+  --bg: #f4f6f9; /* Background color from existing file */
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f6f9;
+  font-family: 'Segoe UI', sans-serif; /* Updated from Arial for modern look */
+  background-color: var(--bg);
   color: #222;
   margin: 0;
   padding: 0;
@@ -10,10 +16,15 @@ body {
 
 /* Header Styles */
 header {
-  background-color: #0d3c66; /* Consistent naming for colors */
+  background-color: var(--primary); /* Use variable for consistency */
   color: #fff;
-  padding: 20px;
+  padding: 60px 20px 30px; /* Updated padding for better spacing */
   text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem; /* Improved scaling */
+  margin-bottom: 0.5rem;
 }
 
 /* Navigation Styles */
@@ -26,7 +37,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #007BFF;
+  color: var(--secondary); /* Updated hover color using variable */
   text-decoration: underline;
 }
 
@@ -40,18 +51,80 @@ main {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
+/* Section Styles */
+.section {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.section h2 {
+  font-size: 1.8rem; /* Updated scaling */
+  color: var(--primary); /* Consistent color usage */
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* Grid and Card Styles (For Awards Section) */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  margin-top: 0;
+  color: var(--secondary);
+  font-size: 1.1rem;
+  transition: color 0.3s ease, text-decoration 0.3s;
+}
+
+.card-content h3:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.card-content p {
+  font-size: 0.95rem;
+  color: #444;
+  margin: 10px 0 0;
+}
+
 /* Footer Styles */
 footer {
-  background-color: #e1e5f2;
+  background-color: var(--primary); /* Use variable for consistency */
   text-align: center;
   padding: 20px;
   font-size: 0.9em; /* Slightly smaller font for footer text */
-  color: #555; /* Softer text color */
+  color: white;
+  margin-top: 40px;
 }
 
 /* Button Styles */
 a.button {
-  background-color: #0d3c66;
+  background-color: var(--primary); /* Use variable for consistency */
   color: #ffffff;
   padding: 10px 20px;
   display: inline-block;
@@ -63,5 +136,5 @@ a.button {
 }
 
 a.button:hover {
-  background-color: #155ca8;
+  background-color: var(--secondary); /* Updated hover color */
 }
