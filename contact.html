@@ -163,10 +163,26 @@
       <div class="card">
         <h3>Email</h3>
         <div class="contact-icons">
-          <a id="emailLink" href="#" aria-label="Email">
-            <i class="fas fa-envelope"></i>
-            <span>Email Me</span>
-          </a>
+          <!-- Updated HTML -->
+<div class="contact-icons">
+  <a id="email-link" href="#" aria-label="Email">
+    <i class="fas fa-envelope"></i>
+    <span>Email Me</span>
+  </a>
+</div>
+
+<!-- Updated JavaScript for Obfuscation -->
+<script>
+  // Dynamically generate and obfuscate the email
+  const user = "yourname"; // Replace with the email username
+  const domain = "example.com"; // Replace with the email domain
+  const email = `${user}@${domain}`; // Assemble the email
+  const emailLink = document.getElementById("email-link");
+
+  // Set the email link
+  emailLink.href = `mailto:${email}`;
+  emailLink.textContent = email;
+</script>
         </div>
       </div>
 
