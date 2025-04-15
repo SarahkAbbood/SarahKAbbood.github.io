@@ -6,6 +6,35 @@
     --white: #fff;
 }
 
+/* Navigation Bar */
+.navigation {
+  background: var(--primary);
+  padding: 15px 20px;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-container a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-container a:hover {
+  color: var(--secondary);
+}
+
+.nav-container .active {
+  text-decoration: underline;
+}
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
