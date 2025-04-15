@@ -198,9 +198,23 @@
   </section>
 
   <section class="section map">
-    <h2>Find Me</h2>
-    <div id="map"></div>
-  </section>
+  <h2>Find Me</h2>
+  <div id="map"></div>
+</section>
+<script>
+  function initMap() {
+    const location = { lat: 47.497912, lng: 19.040235 };
+    const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 14,
+      center: location,
+    });
+    new google.maps.Marker({
+      position: location,
+      map: map,
+    });
+  }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
 
   <footer>
     © <span id="year">2025</span> Dr. Sarah Kadhim Abbood. All rights reserved.
