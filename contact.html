@@ -8,7 +8,6 @@
   <title>Contact – Dr. Sarah Kadhim Abbood</title>
   <!-- Link to external CSS -->
   <link rel="stylesheet" href="css/styles.css">
-</head>
   <!-- Font Awesome for Icons -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <style>
@@ -163,26 +162,10 @@
       <div class="card">
         <h3>Email</h3>
         <div class="contact-icons">
-          <!-- Updated HTML -->
-<div class="contact-icons">
-  <a id="email-link" href="#" aria-label="Email">
-    <i class="fas fa-envelope"></i>
-    <span>Email Me</span>
-  </a>
-</div>
-
-<!-- Updated JavaScript for Obfuscation -->
-<script>
-  // Dynamically generate and obfuscate the email
-  const user = "sarahk.alkafage"; // Replace with the email username
-  const domain = "uokufa.edu.iq"; // Replace with the email domain
-  const email = `${user}@${domain}`; // Assemble the email
-  const emailLink = document.getElementById("email-link");
-
-  // Set the email link
-  emailLink.href = `mailto:${email}`;
-  emailLink.textContent = email;
-</script>
+          <a id="emailLink" href="#" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+            <span>Email Me</span>
+          </a>
         </div>
       </div>
 
@@ -225,6 +208,8 @@
       <input type="text" name="name" placeholder="Your Name" pattern="[A-Za-z\s]+" title="Only letters and spaces allowed" required>
       <input type="email" name="email" placeholder="Your Email" required>
       <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <!-- Google reCAPTCHA -->
+      <div class="g-recaptcha" data-sitekey="6Lcp1RkrAAAAAGAIBhUncDLmkoLFbIj4Q26fdx0Y"></div>
       <button type="submit">Send Message</button>
     </form>
     <p id="successMessage" style="display: none; color: green;">Thank you for reaching out! We'll get back to you soon.</p>
@@ -234,6 +219,7 @@
     © <span id="year">2025</span> Dr. Sarah Kadhim Abbood. All rights reserved.
   </footer>
 
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script>
     // Dynamically update the year in the footer
     document.getElementById("year").textContent = new Date().getFullYear();
@@ -248,10 +234,28 @@
     // Handle form submission success message
     const form = document.getElementById('contactForm');
     const successMessage = document.getElementById('successMessage');
-    form.onsubmit = (e) => {
-      e.preventDefault();
-      successMessage.style.display = 'block';
-    };
+    form.addEventListener('submit', (e) => {
+      e.preventDefault(); // Prevent default form submission
+      const formData = new FormData(form);
+
+      // Send the data to Formspree
+      fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          successMessage.style.display = 'block';
+          form.reset(); // Clear the form
+        } else {
+          alert("There was an issue sending your message. Please try again.");
+        }
+      }).catch(error => {
+        alert("There was an issue sending your message. Please try again.");
+      });
+    });
   </script>
 </body>
 </html>
