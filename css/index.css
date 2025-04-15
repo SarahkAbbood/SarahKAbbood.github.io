@@ -5,7 +5,6 @@
     --text: #1a1a1a;
     --white: #fff;
 }
-
 /* Navigation Bar */
 .navigation {
   background: var(--primary);
