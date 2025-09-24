@@ -279,12 +279,25 @@ a.button:hover {
     padding: 2rem 0;
 }
 
+.profile-section {
+    text-align: center;
+    padding: 2rem 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 .profile-photo {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    margin: 0 auto 1rem auto;
+    margin: 0 auto 1.5rem auto;
     border: 3px solid #002b5c;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+.profile-section h1 {
+    margin-top: 1rem;
+    color: #002b5c;
 }
